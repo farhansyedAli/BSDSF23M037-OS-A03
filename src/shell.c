@@ -74,7 +74,7 @@ char** tokenize(char* cmdline) {
     return arglist;
 }
 
-// built-ins
+// buil-ins
 int handle_builtin(char** arglist) {
     if (!arglist || !arglist[0]) return 0;
 
