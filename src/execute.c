@@ -192,7 +192,7 @@ int execute(char* arglist[], int background, const char* cmdline) {
         arglist[idx] = NULL;
     }
 
-    // Input Redirection (<)
+    // Input Redirection(<)
     int saved_stdin = -1;
     if (input_index != -1) {
         char* filename = arglist[input_index + 1];

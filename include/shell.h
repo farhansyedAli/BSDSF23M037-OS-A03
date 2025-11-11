@@ -30,7 +30,7 @@ typedef struct {
 extern Job jobs[MAX_JOBS];
 extern int job_count;
 
-// Functions
+// Function
 char* read_cmd(char* prompt, FILE* fp);
 char** tokenize(char* cmdline);
 int execute(char** arglist, int background, const char* cmdline);

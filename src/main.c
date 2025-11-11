@@ -1,5 +1,3 @@
-
-
 #include "shell.h"
 
 int main() {
@@ -42,7 +40,7 @@ int main() {
 
             save_command_history(command);
 
-            // Detect background execution (&)
+            // Detect backgroundexecution (&)
             int background = 0;
             for (int i = strlen(command) - 1; i >= 0; i--) {
                 if (command[i] == '&') {

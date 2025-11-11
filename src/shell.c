@@ -34,7 +34,7 @@ char* read_cmd(char* prompt, FILE* fp) {
     (void)fp;
     char* line = readline(prompt);
 
-    if (!line) return NULL;  // Ctrl-D
+    if (!line) return NULL;  // Ctrl+D
 
     if (strlen(line) > 0)
         add_history(line); // from GNU Readline
@@ -101,7 +101,7 @@ int handle_builtin(char** arglist) {
         printf("  history      - show history\n");
         printf("  !n           - rerun nth command\n");
         printf("  jobs         - list background jobs\n");
-        printf("---------------------\n\n");
+        printf("------------------\n\n");
         return 1;
     }
     else if (strcmp(arglist[0], "history") == 0) {
