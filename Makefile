@@ -1,4 +1,4 @@
-# Feature 2
+# Feature 3
 
 CC       = gcc
 CFLAGS   = -Wall -Wextra -g -Iinclude

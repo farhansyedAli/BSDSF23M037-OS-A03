@@ -1,4 +1,3 @@
-
 #include "shell.h"
 
 int execute(char* arglist[]) {
@@ -9,14 +8,12 @@ int execute(char* arglist[]) {
         case -1:
             perror("fork failed");
             exit(1);
-
-        case 0: // --- Child Process ---
-            signal(SIGINT, SIG_DFL);  // restore Ctrl+C default
+        case 0:
+            signal(SIGINT, SIG_DFL);
             execvp(arglist[0], arglist);
             perror("Command not found");
             exit(1);
-
-        default: // --- Parent Process ---
+        default:
             waitpid(cpid, &status, 0);
             return 0;
     }
